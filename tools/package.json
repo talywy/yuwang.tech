@@ -1,0 +1,15 @@
+{
+  "name": "blog_parse",
+  "version": "1.0.0",
+  "description": "parse xml of cnblogs to jekyll",
+  "main": "blog_parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yuwang@iflytek.com",
+  "license": "MIT",
+  "devDependencies": {
+    "date-format": "0.0.2",
+    "xml2js": "^0.4.16"
+  }
+}
