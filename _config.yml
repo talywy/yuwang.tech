@@ -94,8 +94,8 @@ JB:
   comments:
     provider: disqus
     disqus:
-      short_name: talywy
-      public_key: ULZ0b9TFdfCUJSKQd4WCKv2v3u25YoG7YG8zXPewkWrT35lZ0Se9YnxLzoV6VM8W
+      short_name: yuwang
+      public_key: YPH1eKPOxomOQ3oYwjiDYWjb7RtoWdvgYrHmNH3xX23XsnfGFnNHl4JKKpa7CbH2
     livefyre:
       site_id: 123
     intensedebate:
@@ -173,7 +173,7 @@ translations:
   acknowledgements: 'Acknowledgements'
   acknowledgements_link: 'https://github.com/yizeng/yizeng.me/wiki/Acknowledgements'
   show_details: true
-  job_title: 'a software developer'
+  job_title: 'Software Engineer'
   based_in: ' based in '
   city: 'HeiFei, AnHui '
   country: 'China'
@@ -189,7 +189,7 @@ translations:
 
   # 404.html
   404_heading: 'Sorry, the page is not found.'
-  404_content: 'You will be redirected to <a href="/blog">yuwang.tech/blog/</a> in few seconds.'
+  404_content: 'You will be redirected to <a href="/blog">http://yuwang.tech/blog/</a> in few seconds.'
 
 sitemap:
   file: "/sitemap.xml"
