@@ -1,7 +1,6 @@
 _site/*
 _theme_packages/*
 assets/css/.sass-cache/*
-assets/css/*style.css
 .sass-cache/*
 
 **/*~
@@ -20,6 +19,3 @@ Gemfile.lock
 /.idea
 /.sass-cache
 /.gitattributes
-/assets/css/ie8.css
-/assets/css/ie9.css
-/assets/css/running-best-efforts.css
