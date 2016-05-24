@@ -23,11 +23,11 @@ namespace :build do
 			compile_compass(compressed: true)
 			build_jekyll()
 
-			create_production()
-			compress_source()
+			#create_production()
+			#compress_source()
 
 			# re-compile Compass without compressing for development
-			compile_compass(compressed: false)
+			#compile_compass(compressed: false)
 		end
 
 		def execute_command(command)
@@ -48,7 +48,7 @@ namespace :build do
 		end
 
 		def build_jekyll
-			execute_command "jekyll build"
+			execute_command "jekyll build -t"
 		end
 
 		def create_production
