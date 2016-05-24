@@ -7,7 +7,7 @@ assets/css/*style.css
 **/*~
 **/features_report.html
 
-yizeng.github.io/_*
+talywy.github.io/_*
 
 Thumbs.db
 .DS_Store
@@ -20,3 +20,6 @@ Gemfile.lock
 /.idea
 /.sass-cache
 /.gitattributes
+/assets/css/ie8.css
+/assets/css/ie9.css
+/assets/css/running-best-efforts.css

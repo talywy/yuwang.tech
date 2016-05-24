@@ -4,12 +4,12 @@ namespace :build do
 
 	desc 'Build main site into to a pre-defined submodule that will be published to GitHub'
 	task :en do
-		ProductionBuilder.new('./yizeng.github.io', 'yizeng.me').build
+		ProductionBuilder.new('./talywy.github.io', 'yuwang.tech').build
 	end
 
 	desc "Build Chinese site into to a pre-defined folder that will be published to GitHub"
 	task :cn do
-		ProductionBuilder.new('../cn.yizeng.me-gh-pages', 'cn.yizeng.me').build
+		# ProductionBuilder.new('../cn.yizeng.me-gh-pages', 'cn.yizeng.me').build
 	end
 
 	class ProductionBuilder
