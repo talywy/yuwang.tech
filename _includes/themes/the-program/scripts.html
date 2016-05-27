@@ -40,8 +40,10 @@
 	});
 </script>
 
+{% if site.JB.analytics.provider == "google" %}
 <!-- Google Analytics Event tracking -->
 <script>
+
 var sendGaEvent = function(category, action, label) {
 	if (label === 'undefined') {
 		ga('send', 'event', category, action);
@@ -95,6 +97,8 @@ $(document).ready(function () {
 	});
 });
 </script>
+
+{% endif %}
 
 <!-- Show menu overlay + Jekyll Simple Search option -->
 <script src="/assets/js/jekyll-search.jquery.js"></script>
