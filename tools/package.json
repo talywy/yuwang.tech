@@ -10,6 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "date-format": "0.0.2",
+    "mt-downloader": "^1.4.1",
     "xml2js": "^0.4.16"
   }
 }
