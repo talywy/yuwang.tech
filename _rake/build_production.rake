@@ -48,8 +48,8 @@ namespace :build do
 		end
 
 		def build_jekyll
-			# execute_command "jekyll build -t"
-			execute_command "build.cmd"
+			execute_command "jekyll build -t"
+			#execute_command "build.cmd"
 		end
 
 		def create_production
