@@ -21,6 +21,7 @@ tags: es elasticsearch
 * **node**:  `v6.9.4(CentOS release 6.8)` or `v6.2.0(Windows 10)` (可选)
 * **git**: `1.7.1(CentOS release 6.8)` or `2.7.0 (Windows 10)`
 * **jre**: 1.8
+* **es**: 5.0 rtf版
 
 ## 安装步骤
 {: #setup}
@@ -190,6 +191,7 @@ curl -XPOST 'localhost:9200/index/doc' -d '
 }'
 ~~~
 
+es集群安装参考[ElasticSearch Cluster](/2017/04/06/es-cluster)
 
 [cnpm]: https://npm.taobao.org/ "CNPM"
 [elasticsearch-rtf]: https://github.com/medcl/elasticsearch-rtf "elasticsearch-rtf"
