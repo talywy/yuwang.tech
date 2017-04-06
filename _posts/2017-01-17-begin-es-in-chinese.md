@@ -18,7 +18,7 @@ tags: es elasticsearch
 ## 本文使用的环境说明及依赖
 {: #env}
 * **OS**： `CentOS release 6.8` or `Windows 10`
-* **node**:  `v6.9.4(CentOS release 6.8)` or `v6.2.0(Windows 10)`
+* **node**:  `v6.9.4(CentOS release 6.8)` or `v6.2.0(Windows 10)` (可选)
 * **git**: `1.7.1(CentOS release 6.8)` or `2.7.0 (Windows 10)`
 * **jre**: 1.8
 
@@ -50,8 +50,9 @@ tags: es elasticsearch
 
 ### elasticsearch-head 安装
 {: #elasticsearch-head}
-由于head插件在ES5.x版本中不再支持安装在plugin目录中，所以需要独立安装
+由于head插件在ES5.x版本中不再支持安装在plugin目录中，所以需要独立安装, 有node独立运行以及使用nginx两种方式来安装head插件。
 
+#### 使用node独立运行
 ![head plugin](/assets/images/posts/begin_es/head_plugin.png)
 
 * 安装cnpm
@@ -78,29 +79,73 @@ tags: es elasticsearch
 * grunt server
 * open http://localhost:9100/
 
-### nginx
-{: #nginx}
-由于elasticsearch-head和elasticsearch-rft运行在不同的端口，head插件独立部署后，使用时会有跨域问题，故使用nginx代理服务，进行整合。
-* cd elasticsearch-head
-* mv index.html head.html
-* 添加下面的nginx配置后重启nginx
+#### 使用nginx
+elasticsearch-head本身是个静态站点，可直接使用nginx当做服务器来使用。
+
+* cd /usr/local
+
+> git clone git://github.com/mobz/elasticsearch-head.git
+
+然后在nginx中添加
 
 ~~~
-server {
-    listen       80;
-    server_name  localhost;
-
-    location / {
-        proxy_pass http://127.0.0.1:9200;
-    }
-
-    location ~/(head|base|_site) {
-        proxy_pass http://127.0.0.1:9100;
-    }
+location /head {
+   alias /usr/local/elasticsearch-head;
 }
 ~~~
 
-* open http://localhost/head.html
+open http://nginx-server/head
+
+
+### elasticsearch-bigdesk 安装
+{: #elasticsearch-bigdesk}
+原项目作者未升级bigdesk插件用来支持5.x版本，所以使用国内一作者[fork的版本][bigdesk]来进行安装
+
+* cd /usr/local
+
+> git clone https://github.com/hlstudio/bigdesk.git
+
+
+然后在nginx中添加
+
+~~~
+location /bigdesk {
+    alias /usr/local/bigdesk-master/_site;
+}
+~~~
+
+open http://nginx-server/bigdesk
+
+### nginx
+{: #nginx}
+使用nginx将elasticsearch、elasticsearch-head、elasticsearch-bigdesk整合在一起。
+
+* 添加下面的nginx配置后重启nginx
+
+~~~
+ server {
+
+        listen       80;
+        server_name  localhost;
+
+        location / {
+           proxy_pass http://127.0.0.1:9200;
+        }
+
+        location /bigdesk {
+           alias /usr/local/bigdesk-master/_site;
+        }
+
+        location /head {
+           alias /usr/local/elasticsearch-head;
+        }
+
+}
+~~~
+
+* es http://localhost
+* head http://localhost/head
+* bigdesl http://localhost/bigdesk
 
 # 0x03 使用
 {: #begin-use}
@@ -113,7 +158,7 @@ server {
 ~~~
 curl -XPOST 'localhost:9200/index/doc?pretty' -d '
 {
-	"url":"http://www.xxx.com/",
+    "url":"http://www.xxx.com/",
     "title":"基本概念",
     "content":"一些文件内内容的基本概念介绍"
 }'
@@ -148,4 +193,5 @@ curl -XPOST 'localhost:9200/index/doc' -d '
 
 [cnpm]: https://npm.taobao.org/ "CNPM"
 [elasticsearch-rtf]: https://github.com/medcl/elasticsearch-rtf "elasticsearch-rtf"
+[bigdesk]: https://github.com/hlstudio/bigdesk
 
