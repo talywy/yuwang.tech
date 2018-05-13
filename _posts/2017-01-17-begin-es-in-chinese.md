@@ -39,7 +39,9 @@ tags: es elasticsearch
 
 * 修改配置文件
  * vi conf/jvm.options中的-Xms与-Xmx（默认是2G）
+ 
  ![head plugin](/assets/images/posts/begin_es/es_config.png)
+ 
  * **修改conf/jvm.options及bin/elasticsearch文件的编码为UTF8**（vim中使用`:set ff?`查看文件格式，如果出现fileforma＝dos则说明文件编码格式不对，可以使用`:set fileformat=unix`来修改文件的编码为正确格式）
 * 启动 **注意**: 使用非root账号来启动
 
