@@ -2,6 +2,7 @@ _site/*
 _theme_packages/*
 assets/css/.sass-cache/*
 .sass-cache/*
+.jekyll-cache/*
 
 **/*~
 **/features_report.html
@@ -19,3 +20,4 @@ Gemfile.lock
 /.idea
 /.sass-cache
 /.gitattributes
+/.jekyll-cache
