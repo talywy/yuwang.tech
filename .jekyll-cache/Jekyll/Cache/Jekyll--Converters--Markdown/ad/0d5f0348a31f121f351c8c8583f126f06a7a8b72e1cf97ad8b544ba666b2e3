@@ -1,10 +1,5 @@
----
-layout: post
-title: 时间同步小工具(Python + Windows Service + NSIS)
-alias: [/2013/03/07/]
-tags: python, nsis
----
-<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
+I"�q<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
+
 <p>家里有台很多年前买的电脑，CMOS电池残废了，经常遇到开机后系统时间被重置的情况，老妈向我反映用起来很不方便。于是身为一个程序员的我想到写个小工具来帮老妈排忧解难。话不多说，小工具需求如下: <br /><strong>功能需求</strong> -- 电脑开机后自动执行时间同步     <br /><strong>非功能需求</strong> -- 安装执行简单，无需安装额外环境</p>
 <h2 class="custom-h2">一、代码实现</h2>
 <p>基于以上需求，思路如下：访问网络获取北京时间，然后调用命令行来设置系统时间。程序写成Windows Service，并设置为开机自动运行。正好前段时间在学习Python，所以打算用Python来写这个工具。具体代码如下：</p>
@@ -178,10 +173,10 @@ tags: python, nsis
 </div>
 <p><br />好了，现在可以把dist打个包发给老妈用了。但是，这样发个一个压缩包，看起来也太不专业了。解决的办法是打一个安装包，把bat脚本打到安装包里，在安装程序时由安装包调用。这里我用的是NISI（使用HM VNISEdit打包向导来生成打包脚本非常方便）。</p>
 <h2 class="custom-h2">三、最终安装效果图</h2>
-<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:966edc73-4b88-4217-92e4-e2fd8c5746b8" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201303/07205224-0606e0dc52ac49fa9eabc1958dea6685.png" alt="" width="420" height="350"/></div>
+<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:966edc73-4b88-4217-92e4-e2fd8c5746b8" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201303/07205224-0606e0dc52ac49fa9eabc1958dea6685.png" alt="" width="420" height="350" /></div>
 <div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:276da779-a486-4e55-b2d2-d1b4c2826b14" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201303/07205227-0ac57f1683ce471fbd00e73f597223ec.png" alt="" width="420" height="350" /></div>
-<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:07c51362-85cd-4b5e-8314-bda978c4cd4c" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201303/07205234-d9d354cfd52f4a42807ba415de74c23d.png" alt="" width="420" height="257"  /></div>
-<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:8bc0314e-19ff-4214-b31b-b2cc1b04b1d2" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201303/07205236-2f1ead5d83ea43eb9fb29aa4720a527f.png" alt="" width="420" height="350"  /></div>
+<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:07c51362-85cd-4b5e-8314-bda978c4cd4c" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201303/07205234-d9d354cfd52f4a42807ba415de74c23d.png" alt="" width="420" height="257" /></div>
+<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:8bc0314e-19ff-4214-b31b-b2cc1b04b1d2" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201303/07205236-2f1ead5d83ea43eb9fb29aa4720a527f.png" alt="" width="420" height="350" /></div>
 <h2 class="custom-h2">四、结尾</h2>
 <p>遗留的问题:</p>
 <p>1、从上面的截图可以看到，安装程序在调用批处理时会显示出控制台窗口。这个问题我在网上查找资料，NSIS有相关的插件可以隐藏控制台窗口调用bat文件。</p>
@@ -192,3 +187,4 @@ tags: python, nsis
 <p>&nbsp;</p>
 <p><strong>版权说明：</strong><strong>本文章版权归本人及博客园共同所有，未经允许请勿用于任何商业用途。转载请标明原文出处:</strong></p>
 <p><a href="http://www.cnblogs.com/talywy/archive/2013/03/07/SynctimeTool.html">http://www.cnblogs.com/talywy/archive/2013/03/07/SynctimeTool.html</a></p>
+:ET

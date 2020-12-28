@@ -1,14 +1,7 @@
----
-layout: post
-title: 可框选的ListBox
-alias: [/2012/10/09/]
-tags: WPF
----
+I"j:<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
 
-
-<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
 <p style="text-indent: 30px;"><span style="font-family: 微软雅黑; font-size: medium;">最近项目当中遇到一个需要有数据条目框选功能的ListBox，写了一个简单的Demo。效果如下：</span></p>
-<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:24421259-7eb1-42d9-8a5c-c7de0746ffa6" class="wlWriterEditableSmartContent" style="margin: 0px; display: block; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201210/201210092306053064.png" alt="" width="420px" height="331px"/></div>
+<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:24421259-7eb1-42d9-8a5c-c7de0746ffa6" class="wlWriterEditableSmartContent" style="margin: 0px; display: block; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201210/201210092306053064.png" alt="" width="420px" height="331px" /></div>
 <p style="text-indent: 30px;"><span style="font-size: medium;"><span style="font-family: 微软雅黑;">要想实现这样的效果主要要实现以下两点：</span></span></p>
 <p style="text-indent: 30px;"><strong><span style="font-size: medium;"><span style="font-family: 微软雅黑;">1、选择框的绘制</span></span></strong></p>
 <p style="text-indent: 30px;"><strong><span style="font-size: medium;"><span style="font-family: 微软雅黑;">2、绘制过程中计算与选择框相交的Item。</span></span></strong></p>
@@ -90,3 +83,4 @@ tags: WPF
 <p>附上<a href="/assets/attach/talywy/DragSelectTest.zip">源代码</a></p>
 <p><strong>版权说明：</strong><strong>本文章版权归本人及博客园共同所有，未经允许请勿用于任何商业用途。转载请标明原文出处:</strong></p>
 <p><strong><a href="http://www.cnblogs.com/talywy/archive/2012/10/09/DragSelectListBox.html"><span>http://www.cnblogs.com/talywy/archive/2012/10/09/DragSelectListBox.html&nbsp;</span></a>。</strong></p>
+:ET

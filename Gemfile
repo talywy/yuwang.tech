@@ -1,7 +1,9 @@
-source 'https://ruby.taobao.org'
+## source 'http://ruby.taobao.org'
 
-gem 'jekyll', '3.1.1'
-gem 'kramdown'
+source 'https://rubygems.org'
+
+gem 'jekyll', '4.2.0'
+gem 'kramdown', '2.3.0'
 gem 'compass'
 gem 'cucumber'
 gem 'selenium-webdriver', '2.41.0'

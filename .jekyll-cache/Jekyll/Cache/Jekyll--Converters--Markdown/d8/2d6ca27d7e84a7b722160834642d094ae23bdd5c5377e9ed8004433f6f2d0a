@@ -1,11 +1,6 @@
----
-layout: post
-title: WPF中实现自定义虚拟容器(实现VirtualizingPanel)
-alias: [/2012/09/07/]
-tags: WPF
----
-<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
-<span style="font-family: 微软雅黑; font-size: medium;">在WPF应用程序开发过程中，大数据量的数据展现通常都要考虑性能问题。有下面一种常见的情况:原始数据源数据量很大，但是某一时刻数据容器中的可见元素个数是有限的，剩余大多数元素都处于不可见状态，如果一次性将所有的数据元素都渲染出来则会非常的消耗性能。因而可以考虑只渲染当前可视区域内的元素，当可视区域内的元素需要发生改变时，再渲染即将展现的元素，最后将不再需要展现的元素清除掉，这样可以大大提高性能。在WPF中System.Windows.Controls命名空间下的</span><a href="http://msdn.microsoft.com/zh-cn/library/system.windows.controls.virtualizingstackpanel.aspx" target="_blank"><span style="font-family: 微软雅黑; font-size: medium;">VirtualizingStackPanel</span></a><span style="font-family: 微软雅黑; font-size: medium;">可以实现数据展现的虚拟化功能，ListBox的默认元素展现容器就是它。但有时</span><a href="http://msdn.microsoft.com/zh-cn/library/system.windows.controls.virtualizingstackpanel.aspx" target="_blank"><span style="font-family: 微软雅黑; font-size: medium;">VirtualizingStackPanel</span></a><span style="font-family: 微软雅黑; font-size: medium;">的布局并不能满足我们的实际需要，此时就需要实现自定义布局的虚拟容器了。本文将简单介绍容器自定义布局，然后介绍实现虚拟容器的基本原理，最后给出一个虚拟化分页容器的演示程序。&nbsp;</span>
+I"ݿ<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
+
+<p><span style="font-family: 微软雅黑; font-size: medium;">在WPF应用程序开发过程中，大数据量的数据展现通常都要考虑性能问题。有下面一种常见的情况:原始数据源数据量很大，但是某一时刻数据容器中的可见元素个数是有限的，剩余大多数元素都处于不可见状态，如果一次性将所有的数据元素都渲染出来则会非常的消耗性能。因而可以考虑只渲染当前可视区域内的元素，当可视区域内的元素需要发生改变时，再渲染即将展现的元素，最后将不再需要展现的元素清除掉，这样可以大大提高性能。在WPF中System.Windows.Controls命名空间下的</span><a href="http://msdn.microsoft.com/zh-cn/library/system.windows.controls.virtualizingstackpanel.aspx" target="_blank"><span style="font-family: 微软雅黑; font-size: medium;">VirtualizingStackPanel</span></a><span style="font-family: 微软雅黑; font-size: medium;">可以实现数据展现的虚拟化功能，ListBox的默认元素展现容器就是它。但有时</span><a href="http://msdn.microsoft.com/zh-cn/library/system.windows.controls.virtualizingstackpanel.aspx" target="_blank"><span style="font-family: 微软雅黑; font-size: medium;">VirtualizingStackPanel</span></a><span style="font-family: 微软雅黑; font-size: medium;">的布局并不能满足我们的实际需要，此时就需要实现自定义布局的虚拟容器了。本文将简单介绍容器自定义布局，然后介绍实现虚拟容器的基本原理，最后给出一个虚拟化分页容器的演示程序。 </span></p>
 <p style="text-indent: 30px;"><span style="font-family: 微软雅黑; font-size: medium;">&nbsp;</span></p>
 <h2 style="background: #4dc962; border: #cdc9f2 2px solid; padding: 5px;"><span style="font-family: 微软雅黑;"><span style="color: #ffffff;">一、WPF中自定义布局 （已了解容器自定义布局的朋友可略过此节）</span></span></h2>
 <p><span style="font-family: 微软雅黑; font-size: medium;">通常实现一个自定义布局的容器，需要继承System.Windows.Controls.Panel, 并重写下面两个方法: </span></p>
@@ -296,3 +291,4 @@ tags: WPF
 <p>&nbsp;</p>
 <p><strong>版权说明：</strong><strong>本文章版权归本人及博客园共同所有，未经允许请勿用于任何商业用途。转载请标明原文出处:</strong></p>
 <p><strong><a id="Editor_Edit_hlEntryLink" title="view: WPF中实现自定义虚拟容器(实现VirtualizingPanel)" href="http://www.cnblogs.com/talywy/archive/2012/09/07/CustomVirtualizingPanel.html" target="_blank">http://www.cnblogs.com/talywy/archive/2012/09/07/CustomVirtualizingPanel.html</a><span>&nbsp;</span>。</strong></p>
+:ET

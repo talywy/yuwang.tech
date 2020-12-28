@@ -1,10 +1,5 @@
----
-layout: post
-title: FlashCC学习札记
-alias: [/2013/04/03/]
-tags: Flash
----
-<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
+I"0<style type="text/css"> pre { background-color: #eee;  color: black; }</style>
+
 <p>前段时间项目中有一个功能模块用到了FlashCC，将C++的代码编译成swc文件，以便在Flash工程中使用。开发过程中遇到一些问题，现在记录下来，以便日后查阅。</p>
 <h2 class="custom-h2">一、开发环境搭建</h2>
 <p><strong>说明:本文所使用的FlashCC版本为1.0.1， 操作系统为Windows7 Professional 32位</strong></p>
@@ -26,7 +21,7 @@ tags: Flash
 <h2 class="custom-h2">二、编译样例程序</h2>
 <p>直接运行F:\Flash\FlasCC_1.0.1\run.bat，切换工作目录到01_HelloWorld下：</p>
 <p>注意:如果使用的是32位Java虚拟机，则需要修改一下01_HelloWorld下的Makefile, 在编译命令后加上-jvmopt=-Xmx1G</p>
-<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:c3f1106c-5951-4f41-a3b5-bd4d0a774859" class="wlWriterEditableSmartContent" style="margin: 0px; display: inline; float: none; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201304/03131402-8ac39c92aa8b40a1962e5d25bb05836f.png" alt="" width="580" height="201"/></div>
+<div id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:c3f1106c-5951-4f41-a3b5-bd4d0a774859" class="wlWriterEditableSmartContent" style="margin: 0px; display: inline; float: none; padding: 0px;"><img src="/assets/images/posts/cnblogs_com/talywy/201304/03131402-8ac39c92aa8b40a1962e5d25bb05836f.png" alt="" width="580" height="201" /></div>
 <p>否则会报下面的错误:</p>
 <p>&ldquo;LLVM ERROR: Error: Unable to launch the Java Virtual Machine.    <br />This usually means you have a 32bit JVM installed or have set your Java heap siz     <br />e too large.     <br />Try lowering the Java heap size by passing "-jvmopt=-Xmx1G" to gcc/g++.&rdquo;</p>
 <p>在cygwin窗口中输入make：</p>
@@ -91,3 +86,4 @@ tags: Flash
 <p>&nbsp;</p>
 <p><strong>版权说明：</strong><strong>本文章版权归本人及博客园共同所有，未经允许请勿用于任何商业用途。转载请标明原文出处:</strong></p>
 <p><a id="Editor_Edit_hlEntryLink" title="view: FlashCC学习札记" href="http://www.cnblogs.com/talywy/archive/2013/04/03/2997702.html" target="_blank">http://www.cnblogs.com/talywy/archive/2013/04/03/2997702.html</a></p>
+:ET
